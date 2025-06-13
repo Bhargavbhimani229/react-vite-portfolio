@@ -9,7 +9,7 @@ import TextAreaField from "../common/components/TextAreaField/TextAreaField";
 import SubmitButton from "../common/components/SubmitButton/SubmitButton";
 import Loader from "../common/components/Loader/Loader";
 import cv from "../assets/files/cv.pdf";
-import blog from "../assets/images/blog.png"
+import blog from "../assets/images/blog.png";
 
 // import icons
 import { FaNodeJs, FaReact } from "react-icons/fa";
@@ -152,7 +152,7 @@ const projects = [
     link: "https://vercel.com/bhargavbhimani229s-projects/my-gym-website",
     github: "https://github.com/Bhargavbhimani229/my-gym-website",
     description:
-     "Welcome to the My Gym Website, a modern and responsive gym and fitness center website built to showcase gym services, membership plans, trainers, and more.",
+      "Welcome to the My Gym Website, a modern and responsive gym and fitness center website built to showcase gym services, membership plans, trainers, and more.",
     image: Kasper,
   },
   {
@@ -365,49 +365,48 @@ function App() {
             Here you will find some of the personal and clients projects that I
             created with each project containing its own case study
           </p>
-         <div className={style["projects-list"]}>
-  {projects.map((project, index) => {
-    return (
-      <div key={`project${index}`} className={style.project}>
-        <div className={style["project-image"]}>
-          <img src={project.image} alt="Project Image" />
-        </div>
-        <div className={style["project-info"]}>
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
-          <div className={style["project-buttons"]}>
-            <IconButton
-              width="170px"
-              height="50px"
-              backgroundColor="var(--primary-main)"
-              color="white"
-              link={project.link}
-              icon={<AiOutlineEye size="25px" color="white" />}
-            >
-              Live Demo
-            </IconButton>
-            <IconButton
-              width="100px"
-              height="50px"
-              backgroundColor="black"
-              color="white"
-              link={project.github}
-              icon={<AiFillGithub size="25px" color="white" />}
-            >
-              Github
-            </IconButton>
+          <div className={style["projects-list"]}>
+            {projects.map((project, index) => {
+              return (
+                <div key={`project${index}`} className={style.project}>
+                  <div className={style["project-image"]}>
+                    <img src={project.image} alt="Project Image" />
+                  </div>
+                  <div className={style["project-info"]}>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                    <div className={style["project-buttons"]}>
+                      <IconButton
+                        width="170px"
+                        height="50px"
+                        backgroundColor="var(--primary-main)"
+                        color="white"
+                        link={project.link}
+                        icon={<AiOutlineEye size="25px" color="white" />}
+                      >
+                        Live Demo
+                      </IconButton>
+                      <IconButton
+                        width="100px"
+                        height="50px"
+                        backgroundColor="black"
+                        color="white"
+                        link={project.github}
+                        icon={<AiFillGithub size="25px" color="white" />}
+                      >
+                        Github
+                      </IconButton>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
         </div>
       </div>
 
       {/* Contact */}
-      <div id="Contact" className={style.contact} style={{marginTop:"20px"}}>
+      <div id="Contact" className={style.contact} style={{ marginTop: "20px" }}>
         <div className={style.container}>
           <h2 className={style.title}>Contact</h2>
           <p>
